@@ -1,0 +1,32 @@
+✔️ Ce qui est déjà fait 
+Structure claire (models, controllers, routes, middleware)
+
+CRUD basique pour users, posts, comments, connexions
+
+Authentification JWT (si middleware ajouté)
+
+Validation des inputs avec express-validator
+
+Relations entre entités (followers, likes, commentaires)
+
+Sécurisation des routes avec middleware auth
+🔜 Ce qui reste (optionnel mais recommandé pour un vrai projet)
+Tests unitaires et d’intégration (Jest, Mocha)
+
+Pagination + filtrage + recherche sur posts et utilisateurs
+
+Gestion des images / fichiers (upload via Multer ou cloud type Cloudinary)
+
+Notifications temps réel (ex. Socket.io pour alertes like, commentaires)
+
+Gestion des erreurs plus poussée (middleware global d’erreur)
+
+Optimisation des performances (index MongoDB, cache Redis)
+
+Logs & monitoring (Winston, Sentry, etc.)
+
+Sécurité renforcée (rate limiting, helmet, CORS bien configuré)
+
+Documentation API (Swagger ou Postman)
+
+Déploiement (Docker, CI/CD, hébergement cloud)
