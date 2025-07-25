@@ -5,7 +5,7 @@ const {
   acceptRequest,
   declineRequest,
 } = require("../controllers/connectionController");
-const { verifyToken } = require("../middlewares/authMiddleware");
+const { verifyToken } = require("../middleware/authMiddleware");
 
 // Envoyer une demande de connexion
 router.post("/request", verifyToken, sendRequest);

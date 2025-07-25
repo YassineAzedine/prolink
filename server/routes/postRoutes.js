@@ -5,7 +5,7 @@ const {
   getPosts,
   toggleLike,
 } = require("../controllers/postController");
-const { verifyToken } = require("../middlewares/authMiddleware");
+const { verifyToken } = require("../middleware/authMiddleware");
 
 // Créer un post (auth)
 router.post("/", verifyToken, createPost);

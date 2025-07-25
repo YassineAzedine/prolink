@@ -4,7 +4,7 @@ const {
   addComment,
   getComments,
 } = require("../controllers/commentController");
-const { verifyToken } = require("../middlewares/authMiddleware");
+const { verifyToken } = require("../middleware/authMiddleware");
 
 // Ajouter un commentaire à un post (auth)
 router.post("/", verifyToken, addComment);

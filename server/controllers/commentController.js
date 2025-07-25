@@ -3,6 +3,8 @@ const Post = require("../models/Post");
 
 // Add comment to post
 exports.addComment = async (req, res) => {
+  console.log("Adding comment:", req.body);
+  
   try {
     const { content, postId } = req.body;
     const author = req.user.id;

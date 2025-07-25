@@ -5,15 +5,15 @@ const {
   loginUser,
   getUserProfile,
 } = require("../controllers/userController");
-const { verifyToken } = require("../middlewares/authMiddleware");
+const { verifyToken } = require("../middleware/authMiddleware");
 
 // Inscription
-router.post("/register", registerUser);
+// router.post("/register", registerUser);
 
-// Connexion
-router.post("/login", loginUser);
+// // Connexion
+// router.post("/login", loginUser);
 
 // Profil utilisateur (protégé)
-router.get("/:id", verifyToken, getUserProfile);
+// router.get("/:id", verifyToken, getUserProfile);
 
 module.exports = router;

@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const generateToken = require("../utiles/generateToken");
 
 exports.registerUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { fullName, email, password } = req.body;
 
   try {
     const userExists = await User.findOne({ email });
@@ -13,7 +13,7 @@ exports.registerUser = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     const user = new User({
-      name,
+      fullName,      // correspond au schéma
       email,
       password: hashedPassword,
     });
@@ -22,7 +22,7 @@ exports.registerUser = async (req, res) => {
 
     res.status(201).json({
       _id: user._id,
-      name: user.name,
+      fullName: user.fullName,
       email: user.email,
       token: generateToken(user._id),
     });
@@ -30,6 +30,7 @@ exports.registerUser = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
 
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
